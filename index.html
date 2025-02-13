@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosso Cantinho</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 60px;
+            color: #d6336c;
+            animation: pulse 2s infinite;
+        }
+        h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 36px;
+            color: #d6336c;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        img {
+            width: 45%;
+            margin: 10px;
+            border-radius: 10px;
+        }
+        .music {
+            margin-top: 20px;
+        }
+        .music-description {
+            margin-top: 5px;
+            font-style: italic;
+            color: #555;
+            font-size: 22px;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+        .hidden-message {
+            position: relative;
+            cursor: pointer;
+            margin-top: 20px;
+            font-size: 24px;
+            display: inline-block;
+            margin-right: 20px;
+            color: #d6336c;
+        }
+        .hidden-message .message {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 100;
+            width: 200px;
+            text-align: center;
+        }
+        .hidden-message:hover .message {
+            display: block;
+        }
+        .long-message {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            font-size: 18px;
+            line-height: 1.6;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Porque te amo.</h1>
+        <p>Algumas fotos ''nossas'' e uma musiquinha que dediquei a você</p>
+        
+        <h2>Eu amo você. Amo você.</h2>
+        <div>
+            <img src="imagem1.jpg" alt="Imagem 1">
+            <img src="imagem2.jpg" alt="Imagem 2">
+        </div>
+
+        <h2>Te amo, minha malvada favorita.</h2>
+        
+        <!-- Música 1 (Música trocada) -->
+        <div class="music">
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/XcZNJfvE45Y?si=i1EThNoHW-GdOFRn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="music-description">Porque você é minha vilã favorita</div>
+        </div>
+
+        <!-- Mensagens Escondidas -->
+        <div class="hidden-message">
+            Aqui, aqui
+            <span class="message">O gpt recomendou criar uma playlist, então essa é só a primeira parte, temos dois dias dos namorados.</span>
+        </div>
+
+        <div class="hidden-message">
+            Amor, clica em mim
+            <span class="message">Eu amo você</span>
+        </div>
+
+        <div class="hidden-message">
+            Passa o mouse aqui, passa...
+            <span class="message">Amo cada momento que passo com você.</span>
+        </div>
+
+        <!-- Espaço para uma mensagem mais longa -->
+        <div class="long-message">
+            <h2>Uma mensagem especial para você:</h2>
+            <p>
+                Amor, você é a pessoa mais incrível que já conheci. Cada momento do seu lado é o meu melhor momento. 
+                Você me faz sentir amado e bem, eu sei que as vezes você não sente o mesmo mas isso aqui faz parte do meu
+                esforço pra te provar que eu te amo e te amo mais do que você pensa ou pode pensar. 
+                Hoje e sempre, quero estar ao seu lado, dividindo cada coisinha que seja com você meu amor.
+                Eu te amo mais que tudo nesse mundo, mesmo você não acreditando nisso. Feliz Dia dos Namorados meu amor! ❤️
+            </p>
+        </div>
+
+        <!-- Mensagem Final -->
+        <div id="mensagem-final" style="margin-top: 20px; font-size: 28px;"></div>
+    </div>
+
+    <script>
+        // Animação de texto digitado
+        const mensagem = "Eu te amo mais que tudo no mundo. Você é a melhor coisa que já aconteceu na minha vida. Feliz Dia dos Namorados(dos gringos porque te amo no mundo todo)! ❤️";
+        let i = 0;
+        function typeWriter() {
+            if (i < mensagem.length) {
+                document.getElementById('mensagem-final').innerHTML += mensagem.charAt(i);
+                i++;
+                setTimeout(typeWriter, 50);
+            }
+        }
+        typeWriter();
+    </script>
+</body>
+</html>
