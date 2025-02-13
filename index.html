@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nosso Cantinho</title>
+    <title>Nosso Cantinho ❤️</title>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -13,7 +13,6 @@
             color: #333;
             margin: 0;
             padding: 0;
-            font-size: 20px;
         }
         .container {
             max-width: 800px;
@@ -27,17 +26,12 @@
             font-family: 'Dancing Script', cursive;
             font-size: 60px;
             color: #d6336c;
-            animation: pulse 2s infinite;
+            margin-bottom: 20px;
         }
         h2 {
             font-family: 'Dancing Script', cursive;
             font-size: 36px;
             color: #d6336c;
-        }
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
         }
         img {
             width: 45%;
@@ -107,20 +101,25 @@
     </style>
 </head>
 <body>
+    <!-- Verificação de acesso -->
     <script>
-        window.location.href = "acesso.html";
+        // Verifica se o usuário veio da página de acesso
+        if (!document.referrer.includes("acesso.html")) {
+            window.location.href = "acesso.html"; // Redireciona para a página de acesso
+        }
     </script>
+
     <div class="container">
-        <h1>Porque te amo.</h1>
+        <h1>Para Nós ❤️</h1>
         <p>Algumas fotos ''nossas'' e uma musiquinha que dediquei a você</p>
         
-        <h2>Eu amo você. Amo você.</h2>
+        <h2>Não foi isso que o GPT recomendou, mas quis dar um toquezinho mais meu. Amo você.</h2>
         <div>
             <img src="imagem1.jpg" alt="Imagem 1">
             <img src="imagem2.jpg" alt="Imagem 2">
         </div>
 
-        <h2>Te amo, minha malvada favorita.</h2>
+        <h2>Nossa Playlist</h2>
         
         <!-- Música 1 (Música trocada) -->
         <div class="music">
@@ -133,7 +132,7 @@
         <!-- Mensagens Escondidas -->
         <div class="hidden-message">
             Aqui, aqui
-            <span class="message">O gpt recomendou criar uma playlist, então essa é só a primeira parte, temos dois dias dos namorados.</span>
+            <span class="message">Era pra ser várias músicas, mas não deu</span>
         </div>
 
         <div class="hidden-message">
@@ -144,18 +143,6 @@
         <div class="hidden-message">
             Passa o mouse aqui, passa...
             <span class="message">Amo cada momento que passo com você.</span>
-        </div>
-
-        <!-- Espaço para uma mensagem mais longa -->
-        <div class="long-message">
-            <h2>Uma mensagem especial para você:</h2>
-            <p>
-                Amor, você é a pessoa mais incrível que já conheci. Cada momento do seu lado é o meu melhor momento. 
-                Você me faz sentir amado e bem, eu sei que as vezes você não sente o mesmo mas isso aqui faz parte do meu
-                esforço pra te provar que eu te amo e te amo mais do que você pensa ou pode pensar. 
-                Hoje e sempre, quero estar ao seu lado, dividindo cada coisinha que seja com você meu amor.
-                Eu te amo mais que tudo nesse mundo, mesmo você não acreditando nisso. Feliz Dia dos Namorados meu amor! ❤️
-            </p>
         </div>
 
         <!-- Mensagem Final -->
